@@ -9,4 +9,4 @@ Most of the code is written in python, however, some Java is included as well.
 2) Different ways of calculating the nth fibonacci number
 3) Brent's Tortoise & Hare
 4) Folder containing multiple Euler problems with simple solutions
-5) Sum of Powers: express a value X as a sum of powers!
+5) Sum of Powers: express a value X as a sum of powers (Kattis problem)!
