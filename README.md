@@ -5,8 +5,9 @@ Most of the code is written in python, however, some Java is included as well.
 
 ### Current small files:
 
-1) Approximation of PI using points
-2) Different ways of calculating the nth fibonacci number
-3) Brent's Tortoise & Hare
+1) Approximation of PI using points in a 2D plane - approximationOfPi.py
+2) Different ways of calculating the nth fibonacci number - nFibonacci.py
+3) Brent's Tortoise & Hare - brent.py
 4) Folder containing multiple Euler problems with simple solutions
-5) Sum of Powers: express a value X as a sum of powers (Kattis problem)!
+5) Express X as a sum of powers - SumOfPowers.java !
+6) Sum of squares on a chess board - ChessBoard.py!
