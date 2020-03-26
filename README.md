@@ -6,3 +6,4 @@ various problems in ranging difficulty. Most of the programs are simple focusing
 1) Approximation of PI using points
 2) Different ways of calculating the nth fibonacci number
 3) Brent's Tortoise & Hare
+4) Folder containing multiple Euler problems with simple solutions
