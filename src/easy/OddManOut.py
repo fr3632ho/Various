@@ -1,5 +1,9 @@
 import sys
 
+'''
+Problem of finding the odd man out at a dinner party with pairs given N guests and all given
+a number as identification. Find the person who came alone to the party.
+'''
 def mergeSort(oldList):
     if len(oldList) > 1:
         middle_point = len(oldList)//2
