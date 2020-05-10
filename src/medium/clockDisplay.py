@@ -1,16 +1,16 @@
 import sys
 import numbers
 
-zero  = f'+---+\n|   |\n|   |\n+   +\n|   |\n|   |\n+---+'
-one   = f'    +\n    |\n    |\n    +\n    |\n    |\n    +'
-two   = f'+---+\n    |\n    |\n+---+\n|    \n|    \n+---+'
-three = f'+---+\n    |\n    |\n+---+\n    |\n    |\n+---+'
-four  = f'+   +\n|   |\n|   |\n+---+\n    |\n    |\n    +'
-five  = f'+---+\n|    \n|    \n+---+\n    |\n    |\n+---+'
-six   = f'+---+\n|    \n|    \n+---+\n|   |\n|   |\n+---+'
-seven = f'+---+\n    |\n    |\n    +\n    |\n    |\n    +'
-eight = f'+---+\n|   |\n|   |\n+---+\n|   |\n|   |\n+---+'
-nine  = f'+---+\n|   |\n|   |\n+---+\n    |\n    |\n    +'
+zero  = ["+---+", "|   |", "|   |", "+   +", "|   |", "|   |", "+---+"]
+one   = ["    +", "    |", "    |", "    +", "    |", "    |", "    +"]
+two   = ["+---+", "    |", "    |", "+---+", "|    ", "|    ", "+---+"]
+three = ["+---+", "    |", "    |", "+---+", "    |", "    |", "+---+"]
+four  = ["+   +", "|   |", "|   |", "+---+", "    |", "    |", "    +"]
+five  = ["+---+", "|    ", "|    ", "+---+", "    |", "    |", "+---+"]
+six   = ["+---+", "|    ", "|    ", "+---+", "|   |", "|   |", "+---+"]
+seven = ["+---+", "    |", "    |", "    +", "    |", "    |", "    +"]
+eight = ["+---+", "|   |", "|   |", "+---+", "|   |", "|   |", "+---+"]
+nine  = ["+---+", "|   |", "|   |", "+---+", "    |", "    |", "+---+"]
 s     = f' \n \no\n \no\n \n '
 
 nbrs = { '1' : one,
@@ -30,17 +30,16 @@ semi = nbrs['semi'].split('\n')
 def print_dict(d):
     print()
     for key,value in d.items():
-        print(f'{key} -> {len(value.strip())}')
+        print(f'{key:5} => {len(value):5d}')
 
 def print_time(line):
     s = '  '
     words = line.split(':')
     t1,t2,t3,t4 = nbrs[words[0][0]],nbrs[words[0][1]],nbrs[words[1][0]],nbrs[words[1][1]]
-    t1,t2,t3,t4 = t1.split('\n'),t2.split('\n'),t3.split('\n'),t4.split('\n')
     for i in range(0,len(t1)):
-        print(t1[i] + s + t2[i] + s + semi[i] + s + t3[i] + s + t4[i])
-    print()
-    print()
+        s = 'o' if (i == 2 or i == 4) else ' '
+        print(f'{t1[i]}  {t2[i]}  {s}  {t3[i]}  {t4[i]}')
+    print('\n')
 
 def print_times(data):
     for line in data:
@@ -49,15 +48,10 @@ def print_times(data):
             break
         print_time(line)
 
-
-
-def main():
+if __name__ == "__main__":
     input = sys.stdin.read().rstrip('\n').split('\n')
     print_times(input)
     #print_dict(nbrs)
-
-if __name__ == "__main__":
-    main()
 
 
 
