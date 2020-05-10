@@ -30,17 +30,17 @@ semi = nbrs['semi'].split('\n')
 def print_dict(d):
     print()
     for key,value in d.items():
-        print(f'{key} -> {len(value)}')
+        print(f'{key} -> {len(value.strip())}')
 
 def print_time(line):
     s = '  '
     words = line.split(':')
     t1,t2,t3,t4 = nbrs[words[0][0]],nbrs[words[0][1]],nbrs[words[1][0]],nbrs[words[1][1]]
     t1,t2,t3,t4 = t1.split('\n'),t2.split('\n'),t3.split('\n'),t4.split('\n')
-    str = ''
     for i in range(0,len(t1)):
-        str += t1[i] + s + t2[i] + s + semi[i] + s + t3[i] + s + t4[i] + '\n'
-    print(str + '\n')
+        print(t1[i] + s + t2[i] + s + semi[i] + s + t3[i] + s + t4[i])
+    print()
+    print()
 
 def print_times(data):
     for line in data:
@@ -49,9 +49,15 @@ def print_times(data):
             break
         print_time(line)
 
-input = sys.stdin.read().rstrip('\n').split('\n')
-print_times(input)
-print_dict(nbrs)
+
+
+def main():
+    input = sys.stdin.read().rstrip('\n').split('\n')
+    print_times(input)
+    #print_dict(nbrs)
+
+if __name__ == "__main__":
+    main()
 
 
 
