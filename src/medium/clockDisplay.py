@@ -23,12 +23,6 @@ nbrs = { '1' : one,
                    '9' : nine,
                    '0' : zero}
 
-
-def print_dict(d):
-    print()
-    for key,value in d.items():
-        print(f'{key:5} => {len(value):5d}')
-
 def print_time(line):
     s = '  '
     words = line.split(':')
@@ -48,8 +42,3 @@ def print_times(data):
 if __name__ == "__main__":
     input = sys.stdin.read().rstrip('\n').split('\n')
     print_times(input)
-    #print_dict(nbrs)
-
-
-
-#END
