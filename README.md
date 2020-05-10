@@ -3,6 +3,7 @@ various problems in ranging difficulty. Most of the programs are simple and focu
 
 Most of the code is written in python, however, some Java is included as well.
 
+Link to my Kattis account can be found [here](https://open.kattis.com/users/fredrik-horn-dannert)
 ### Folders:
 
 1) [easy](https://github.com/fr3632ho/Various/tree/master/src/easy), contains Kattis problems of difficulty ranging from 2-3
