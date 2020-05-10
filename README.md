@@ -6,5 +6,5 @@ Most of the code is written in python, however, some Java is included as well.
 ### Folders:
 
 1) [easy](https://github.com/fr3632ho/Various/tree/master/src/easy), contains Kattis problems of difficulty ranging from 2-3
-2) [medium] (https://github.com/fr3632ho/Various/tree/master/src/medium), contains Kattis problems of difficulty 3-5
+2) [medium](https://github.com/fr3632ho/Various/tree/master/src/medium), contains Kattis problems of difficulty 3-5
 3) [Euler problems](https://github.com/fr3632ho/Various/tree/master/src/eulerproblems), contains various euler problems solved using python.
