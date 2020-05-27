@@ -35,6 +35,7 @@ def dijkstra(G, source):
         dist, u = heappop(Q)
         visited[u] = True
 
+        # Loop through neighbours
         for n in G.edges[u]:
             alt = dist + G.distances[(u,n)]
             if not visited[n] and alt < distance[n]:
