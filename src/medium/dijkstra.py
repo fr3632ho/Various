@@ -45,9 +45,4 @@ def dijkstra(G, source):
     return distance
 
 
-
-
-
-
-
 # END
