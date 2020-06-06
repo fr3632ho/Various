@@ -164,25 +164,32 @@ class AmcTest(unittest.TestCase):
         self.assertTrue(bd == r)
 
     def test_zero_terminal(self):
-        m = [[0,0,0,0,0],
-             [1,1,1,1,1],
-             [0,0,0,0,0],
-             [1,1,1,1,1],
-             [0,0,0,0,0]]
+        m = [[0, 0, 0, 0, 0],
+             [1, 1, 1, 1, 1],
+             [0, 0, 0, 0, 0],
+             [1, 1, 1, 1, 1],
+             [0, 0, 0, 0, 0]
+             ]
         b = AmcTest.calculate_b(m)
         self.assertTrue(b == [1,0,0,1])
 
-        m = [[0,0,0,0,0],
-             [0,0,0,0,0],
-             [0,0,0,0,0],
-             [1,1,1,1,1],
-             [0,0,0,0,0]]
+        m = [[0, 0, 0, 0, 0],
+             [0, 0, 0, 0, 0],
+             [0, 0, 0, 0, 0],
+             [1, 1, 1, 1, 1],
+             [0, 0, 0, 0, 0]
+             ]
         b = AmcTest.calculate_b(m)
         self.assertTrue(b == [1,0,0,0,1])
 
     def test_more(self):
         # TEST 1
-        m = [[0, 2, 1, 0, 0], [0, 0, 0, 3, 4], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]
+        m = [[0, 2, 1, 0, 0],
+             [0, 0, 0, 3, 4],
+             [0, 0, 0, 0, 0],
+             [0, 0, 0, 0, 0],
+             [0, 0, 0, 0, 0]
+             ]
         self.assertEqual([Fraction(7,21), Fraction(6,21), Fraction(8,21)], AmcTest.markov_probabilities(m))
 
         # TEST 2
@@ -274,8 +281,6 @@ class AmcTest(unittest.TestCase):
             [0, 0, 0, 0, 0,],
             [1, 1, 1, 1, 1,]
             ])
-
-
 
 if __name__ == "__main__":
     unittest.main()
