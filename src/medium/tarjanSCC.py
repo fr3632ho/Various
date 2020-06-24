@@ -21,6 +21,7 @@ def strong_connect(v,dfnum,G):
         elif on_stack[n] and dfnum[n] < dfnum[v]:
             lowlink[v] = min(lowlink[n], lowlink[v])
 
+    # SCC on stack
     if lowlink[v] == dfnum[v]:
         scc = []
         while stack:
@@ -29,6 +30,7 @@ def strong_connect(v,dfnum,G):
             scc.append(w)
 
     print(lowlink, '\n', dfnum, scc)
+    scc = []
 
 
 def search_scc(G):

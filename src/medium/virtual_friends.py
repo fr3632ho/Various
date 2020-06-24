@@ -1,3 +1,4 @@
+# Union Find problem
 import sys
 
 class Sets:
@@ -10,7 +11,9 @@ class Sets:
     Check if u, v are connected in the same tree
     '''
     def is_connected(self, u, v):
-        return self.find_parent(u) == self.find_parent(v)
+        if u == v:
+            return True
+        return self.parents[u] == self.parents[v]
 
     '''
     Union between u,v
@@ -23,12 +26,11 @@ class Sets:
             return
 
         if self.sizes[x_parent] > self.sizes[y_parent]:
-            self.parents[y_parent] = x_parent
             self.sizes[x_parent] += self.sizes[y_parent]
+            self.parents[y_parent] = x_parent
         else:
-            self.parents[x_parent] = y_parent
             self.sizes[y_parent] += self.sizes[x_parent]
-
+            self.parents[x_parent] = y_parent
 
     '''
     Find parent of u and parent of v and move them up the tree structure
@@ -38,23 +40,29 @@ class Sets:
         # First find the root
         while root != self.parents[root]:
             root = self.parents[root]
+
         # Path compression
-        while v != root:
-            _p = self.parents[v]
-            self.parents[v] = root
-            v = _p
+        p_prime = v
+        while p_prime != root:
+            _p = self.parents[p_prime]
+            self.parents[p_prime] = root
+            p_prime = _p
 
         return root
 
-N = int(sys.stdin.readline().strip().split()[0])
-sets = Sets(N)
-for i in sys.stdin:
-    q = i.strip().split()
-    print(q)
-    if q[0] == '=':
-        sets.union(int(q[1]), int(q[2]))
-    else:
-        if sets.is_connected(int(q[1]), int(q[2])):
-            print("yes")
-        else:
-            print("no")
+def main():
+    # Query handling
+    data = []
+    T = int(sys.stdin.readline().strip())
+    F = int(sys.stdin.readline().strip())
+    for i in sys.stdin:
+        data.append(i.split())
+    
+
+
+
+if __name__ == '__main__':
+    main()
+
+
+# END
