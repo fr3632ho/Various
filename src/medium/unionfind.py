@@ -1,5 +1,8 @@
 import sys
 
+'''
+Union-Find data structure for the kattis problem "Union-Find".
+'''
 class Sets:
 
     def __init__(self, n):
