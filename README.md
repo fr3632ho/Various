@@ -1,5 +1,5 @@
 # Various
-various problems in ranging difficulty. Most of the programs are simple and focusing on fun math heavy algorithms. Most of the files are simply small side projects that I do when i'm bored. Will be continiously updating this repository when i've got new stuff laying around.
+various problems in ranging difficulty. Most of the programs are simple and focusing on fun math problems. Most of the files are simply small side projects that I do when i'm bored. Will be continiously updating this repository when i've got new stuff laying around.
 
 Most of the code is written in python, however, some Java is included as well.
 
