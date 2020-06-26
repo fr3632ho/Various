@@ -11,3 +11,7 @@ More use of the Union Find data structure, just a little simpler since the time 
 
 Done more for the sake of learning the procedure of the algorithm and not as a correct implementation. Not tested.
 
+4. [Dijkstras shortest path algorithm](https://github.com/fr3632ho/various/blob/master/src/medium/dijkstra.py)
+
+Implementation just for the sake of learning the algorithm. Tested in other various problems and works.
+
