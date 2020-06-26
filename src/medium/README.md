@@ -15,3 +15,7 @@ Done more for the sake of learning the procedure of the algorithm and not as a c
 
 Implementation just for the sake of learning the algorithm. Tested in other various problems and works.
 
+5. [Mandlebrot](https://github.com/fr3632ho/various/blob/master/src/medium/mandlebrot.py), link to problem [statement](https://open.kattis.com/problems/mandelbrot)
+
+Determine if a number *c* is in the mandelbrot set or not. 
+
