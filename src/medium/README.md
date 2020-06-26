@@ -7,6 +7,10 @@ Implementation of a data structure which tracks a set of elements partitioned in
 
 More use of the Union Find data structure, just a little simpler since the time constraints are not as harsh. Basically a modified version of the problem given above.
 
+3. [Airconditioned Minions](https://github.com/fr3632ho/various/blob/master/src/medium/AC_minions.py) (*AC_minions.py*), link to problem [statement](https://open.kattis.com/problems/airconditioned)
+
+For every range given as a preference for a minion, determine how many of these preferences you can combine into a larger preference range where the intersection of preference is not equal to the empty set. What is to be determined here is the number of larger sets one would need to cover all the preferences of the minions.
+
 3. [Tarjans Algorithm for strongly connected components](https://github.com/fr3632ho/various/blob/master/src/medium/tarjan_scc.py)
 
 Done more for the sake of learning the procedure of the algorithm and not as a correct implementation. Not tested.
