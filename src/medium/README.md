@@ -5,5 +5,5 @@ Implementation of a data structure which tracks a set of elements partitioned in
 
 2. [Virtual Friends(https://github.com/fr3632ho/various/blob/master/src/medium/virtual_friends.py) (*virtual_friends.py*), link to problem [statement](https://open.kattis.com/problems/virtualfriends)
 
-More use of the Union Find data structure, just a little simpler since the time constraints aren't as harsh.
+More use of the Union Find data structure, just a little simpler since the time constraints are not as harsh. Basically a modified version of the original Union Find problem.
 
