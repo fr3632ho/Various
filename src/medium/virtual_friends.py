@@ -1,63 +1,72 @@
 # Union Find problem
 import sys
 
-class Sets:
+class Network:
 
-    def __init__(self, n):
-        self.sizes  = [1]*n
-        self.parents = [i for i in range(n)]
-
-    '''
-    Check if u, v are connected in the same tree
-    '''
-    def is_connected(self, u, v):
-        if u == v:
-            return True
-        return self.parents[u] == self.parents[v]
+    def __init__(self, N):
+        self.parents = [[i, ''] for i in range(2*N)]
+        self.p_indices = dict()
+        self.sizes = [1]*(2*N)
+        self.index = 0
 
     '''
-    Union between u,v
-    Compare on number of children
+    Add every person to the network iff key not present in p_indices
     '''
-    def union(self, u, v):
-        x_parent, y_parent = self.find_parent(u), self.find_parent(v)
-
-        if x_parent == y_parent:
-            return
-
-        if self.sizes[x_parent] > self.sizes[y_parent]:
-            self.sizes[x_parent] += self.sizes[y_parent]
-            self.parents[y_parent] = x_parent
-        else:
-            self.sizes[y_parent] += self.sizes[x_parent]
-            self.parents[x_parent] = y_parent
+    def add_new(self, *args):
+        for i in args:
+            if i not in self.p_indices.keys():
+                self.parents[self.index][1] = i
+                self.p_indices[i] = self.index
+                self.index += 1
 
     '''
-    Find parent of u and parent of v and move them up the tree structure
+    Locate root of every person by index.
     '''
-    def find_parent(self, v):
-        root = v
-        # First find the root
-        while root != self.parents[root]:
-            root = self.parents[root]
+    def n_find(self, v):
+        v_index = self.p_indices[v]
+        root = v_index
+        # find root
+        while root != self.parents[root][0]:
+            root = self.parents[root][0]
 
-        # Path compression
-        p_prime = v
-        while p_prime != root:
-            _p = self.parents[p_prime]
-            self.parents[p_prime] = root
-            p_prime = _p
+        # [v-index, v-name], path compression
+        p = self.parents[v_index]
+        while p[0] != root:
+            # Parent of p
+            _p = self.parents[p[0]]
+            # Only change the parent of each element in the parent list
+            p[0] = root
+            p = _p
 
         return root
 
+    def n_union(self, u, v):
+        u_parent, v_parent = self.n_find(u), self.n_find(v)
+        connected = 0
+
+        if u_parent == v_parent:
+            connected = max(self.sizes[u_parent], self.sizes[v_parent])
+        elif self.sizes[u_parent] > self.sizes[v_parent]:
+            self.parents[v_parent][0] = u_parent
+            self.sizes[u_parent] += self.sizes[v_parent]
+            connected = self.sizes[u_parent]
+        else:
+            self.parents[u_parent][0] = v_parent
+            self.sizes[v_parent] += self.sizes[u_parent]
+            connected = self.sizes[v_parent]
+
+        print(connected)
+
 def main():
     # Query handling
-    data = []
     T = int(sys.stdin.readline().strip())
-    F = int(sys.stdin.readline().strip())
-    for i in sys.stdin:
-        data.append(i.split())
-    
+    for test in range(T):
+        F = int(sys.stdin.readline().strip())
+        network = Network(F)
+        for i in range(F):
+            a, b = sys.stdin.readline().strip().split()
+            network.add_new(a, b)
+            network.n_union(a, b)
 
 
 
