@@ -11,15 +11,19 @@ More use of the Union Find data structure, just a little simpler since the time 
 
 For every range given as a preference for a minion, determine how many of these preferences you can combine into a larger preference range where the intersection of preference is not equal to the empty set. What is to be determined here is the number of larger sets one would need to cover all the preferences of the minions.
 
-3. [Tarjans Algorithm for strongly connected components](https://github.com/fr3632ho/various/blob/master/src/medium/tarjan_scc.py)
+4. [Dominoes 2](https://github.com/fr3632ho/various/blob/master/src/medium/dominoes_2.py), link to problem [statement](https://open.kattis.com/problems/dominoes2)
+
+Count the number of dominoes that would fall over if given dominoe was to be tipped. Solved using a **BFS** to count all reachable nodes.
+
+5. [Tarjans Algorithm for strongly connected components](https://github.com/fr3632ho/various/blob/master/src/medium/tarjan_scc.py)
 
 Done more for the sake of learning the procedure of the algorithm and not as a correct implementation. Not tested.
 
-4. [Dijkstras shortest path algorithm](https://github.com/fr3632ho/various/blob/master/src/medium/dijkstra.py)
+6. [Dijkstras shortest path algorithm](https://github.com/fr3632ho/various/blob/master/src/medium/dijkstra.py)
 
 Implementation just for the sake of learning the algorithm. Tested in other various problems and works.
 
-5. [Mandlebrot](https://github.com/fr3632ho/various/blob/master/src/medium/mandlebrot.py) (*mandelbrot.py*), link to problem [statement](https://open.kattis.com/problems/mandelbrot)
+7. [Mandlebrot](https://github.com/fr3632ho/various/blob/master/src/medium/mandlebrot.py) (*mandelbrot.py*), link to problem [statement](https://open.kattis.com/problems/mandelbrot)
 
 Determine if a number *c* is in the mandelbrot set or not. 
 
