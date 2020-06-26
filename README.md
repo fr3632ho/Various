@@ -7,5 +7,5 @@ Link to my Kattis account can be found [here](https://open.kattis.com/users/fred
 ### Folders:
 
 1) [easy](https://github.com/fr3632ho/Various/tree/master/src/easy), contains Kattis problems of difficulty ranging from 2-3
-2) [medium](https://github.com/fr3632ho/Various/tree/master/src/medium), contains Kattis problems of difficulty 3-5
+2) [medium](https://github.com/fr3632ho/Various/tree/master/src/medium), contains Kattis problems of difficulty 3-6
 3) [Euler problems](https://github.com/fr3632ho/Various/tree/master/src/eulerproblems), contains various euler problems solved using python.
