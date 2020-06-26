@@ -7,6 +7,7 @@
 |  4 | [Dominoes 2](https://github.com/fr3632ho/various/blob/master/src/medium/dominoes_2.py)  | Link to problem [statement on Kattis](https://open.kattis.com/problems/dominoes2). Count the number of dominoes that would fall over if given dominoe was to be tipped. Solved using a **BFS** to count all reachable nodes.  |
 |  5 | [Mandlebrot](https://github.com/fr3632ho/various/blob/master/src/medium/mandlebrot.py) | Determine if a number *c* is in the mandelbrot set or not. |
 |  6 | [Tarjans Algorithm for strongly connected components](https://github.com/fr3632ho/various/blob/master/src/medium/tarjan_scc.py)  |  Done more for the sake of learning the procedure of the algorithm and not as a correct implementation. Not tested. |
+|  a | b  |  c |
 |  7 | [Dijkstras shortest path algorithm](https://github.com/fr3632ho/various/blob/master/src/medium/dijkstra.py)  |  
 Implementation just for the sake of learning the algorithm. Tested in other various problems and works. |
 
