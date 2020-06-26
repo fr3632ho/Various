@@ -5,5 +5,9 @@ Implementation of a data structure which tracks a set of elements partitioned in
 
 2. [Virtual Friends(https://github.com/fr3632ho/various/blob/master/src/medium/virtual_friends.py) (*virtual_friends.py*), link to problem [statement](https://open.kattis.com/problems/virtualfriends)
 
-More use of the Union Find data structure, just a little simpler since the time constraints are not as harsh. Basically a modified version of the original Union Find problem.
+More use of the Union Find data structure, just a little simpler since the time constraints are not as harsh. Basically a modified version of the problem given above.
+
+3. [Tarjans Algorithm for strongly connected components], [link](https://github.com/fr3632ho/various/blob/master/src/medium/tarjanSCC.py)
+
+Done more for the sake of learning the procedure of the algorithm and not as a correct implementation. Not tested.
 
