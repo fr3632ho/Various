@@ -7,7 +7,7 @@ Implementation of a data structure which tracks a set of elements partitioned in
 
 More use of the Union Find data structure, just a little simpler since the time constraints are not as harsh. Basically a modified version of the problem given above.
 
-3. [Tarjans Algorithm for strongly connected components](https://github.com/fr3632ho/various/blob/master/src/medium/tarjanSCC.py) [link](https://github.com/fr3632ho/various/blob/master/src/medium/tarjanSCC.py)
+3. [Tarjans Algorithm for strongly connected components](https://github.com/fr3632ho/various/blob/master/src/medium/tarjanSCC.py)
 
 Done more for the sake of learning the procedure of the algorithm and not as a correct implementation. Not tested.
 
