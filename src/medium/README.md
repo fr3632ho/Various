@@ -2,6 +2,10 @@
 |  Ord. | File | Description & Links  |
 |---|---|---|
 |  1 | [Union Find](https://github.com/fr3632ho/various/blob/master/src/medium/union-find/unionfind.py)  |Link to problem statement on [kattis](https://open.kattis.com/problems/unionfind). Implementation of a data structure which tracks a set of elements partitioned into a number of disjoint subsets, also called Union Find. The *union* method is implemented using **union by size** which compares the size of the disjoints sets when union is performed. The *find* part of the data structure uses **path compression** to limit the height of the trees, created by union between elements, to speed up the process of determining wether two elements belong to the same set or not. By the use of path compression we speed up the find part of the algorithm significantly, from O(n) to constant time.   |
+|---|---|---|
+|---|---|---|
+|---|---|---|
+|---|---|---|
 |  2 | [Virtual Friends](https://github.com/fr3632ho/various/blob/master/src/medium/virtual-friends/virtual_friends.py)  |  Link to problem statement on [Kattis](https://open.kattis.com/problems/unionfind). More use of the Union Find data structure, just a little simpler since the time constraints are not as harsh. Basically a modified version of the problem given above.|
 | 3 | [10 kinds of people](https://github.com/fr3632ho/various/tree/master/src/medium/10-kinds-of-people) | Link to problem statement on [kattis](https://open.kattis.com/problems/10kindsofpeople). Pathfinding problem which can be solved using the union find datastructure. Solutions in Java and python! |
 | 4 | [Prime sieve](https://github.com/fr3632ho/various/tree/master/src/medium/primesieve) | Link to problem statement on [kattis](https://open.kattis.com/problems/primesieve). Three different implementations of [Sieve of Eratosthenes](https://www.wikiwand.com/en/Sieve_of_Eratosthenes) using various data structures. One with the naive implementation, one using a segmented sieve and the third in Java using a BitSet. The problem has high demands on memory efficiency as well as speed. |
