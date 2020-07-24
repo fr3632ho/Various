@@ -85,7 +85,7 @@ public class SPFA {
     dist[source] = 0; inQueue[source] = true;
 
     // Setup the queue
-    Queue<Integer> queue = new LinkedList<>();
+    Queue<Integer> queue = new ArrayDeque<>();
     queue.offer(source);
     while(!queue.isEmpty()){
       u = queue.poll();
@@ -109,26 +109,18 @@ public class SPFA {
       }
     }
 
+    // Reuse the old inQueue
     visited = inQueue;
-    for(int i=0; i<n; i++){
-      visited[i] = false;
-    }
+    for(int i=0; i<n; i++) visited[i] = false;
 
     // All nodes with > n-1 relaxations
-    for(int j=0; j<n; j++){
-      if (visits[j] == n){
-        DFS(map, j, visited);
-      }
-    }
+    for(int j=0; j<n; j++)
+      if (visits[j] == n) DFS(map, j, visited);
 
-    for(int h=0; h<n; h++){
-      if(visited[h]){
-        dist[h] = -inf;
-      }
-    }
+    for(int h=0; h<n; h++)
+      if(visited[h]) dist[h] = -inf;
 
     return dist;
-
   }
 
   public void addEdge(Map<Integer, List<Edge>> map, int from, int to, int weight){
